@@ -1,3 +1,12 @@
+
+
+#pretragaDiv {
+    margin: 0 auto;
+    width: 600px;
+    height: auto;
+}
+
+
 body{
     font-family: 'Roboto Slab', serif;
     margin: 0;
