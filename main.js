@@ -6,7 +6,7 @@ let rezultati = []
 
 function render(niz) {
   let sablon = ''
-  const limit = niz.length >= 12 ? 12 : niz.length
+  const limit = niz.length >= 14 ? 14 : niz.length
   for (var i = 0; i < limit; i++) {
     sablon += ` <div class= "filmski-div">
             <h3 class= "naslov-filma">${niz[i].naziv}</h3> 
