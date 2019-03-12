@@ -37,14 +37,14 @@
         <main class="element2">
             <div id="adding">
                 <h1>Dodavanje filmova</h1>
-                <form action="">
+                <form action="https://baza-filmova.herokuapp.com/dodaj-film/" method="POST">
                     Naziv: <br>
-                    <input type="text"><br>
+                    <input type="text" name="naziv"><br>
                     Godina: <br>
-                    <input id="godina" type="text"><br>
+                    <input id="godina" type="text" name="godina"><br>
                     Slika URL: <br>
-                    <input id="slika" type="text"> <br><br>
-                    <input type="button" value="OK">
+                    <input id="slika" type="text" name="slika"> <br><br>
+                    <input type="submit" value="OK">
                 </form>
 
             </div>
