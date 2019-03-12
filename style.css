@@ -64,15 +64,17 @@ main{
 .element2 {
     grid-column: 1 / span2;
     grid-row: 2;
+    position: relative;
     
 }
 
-.element2 div{
+.element2 #good{
     width: 450px;
     height: auto;
     text-align: center;
     margin: 0 auto;
     padding-top: 200px;
+    
 }
 
 .element3 {
@@ -82,4 +84,41 @@ main{
     padding: 10px;
     color: white;
     
+}
+
+.element2 #adding{
+    
+    position:absolute;
+    top:20%;
+    left: 10%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.element2 #adding input[value="OK"] {
+    width: 100px;
+    border-radius: 10px;
+    background-color: brown;
+    color: white;
+    
+}
+
+.element2 #adding input[value="OK"]:hover {
+   
+    background-color: black;
+    color: yellow;
+    cursor: pointer;
+    
+}
+.element2 #adding input {
+    width: 300px;
+    border-radius: 10px;
+    
+}
+
+.element2 #picture{
+  
+    position:absolute;
+    top:20%;
+    right: 20%;
 }
