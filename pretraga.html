@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
 
 </head>
 
@@ -38,17 +41,22 @@
                 
         
                         <div id="pretragaDiv">
+                            <div id="pretraga-gore">
                             Pretraga po nazivu
                         
-                        <input type="text" id="krijerijum">
-                        <button id="pretraga">Pretrazi</button><br>
-                          Sortiraj po godini
-                           <button id="godina-gore"> ^ </button> 
-                           <button id="godina-dole"> v </button>  
-
+                        <input type="text" id="kriterijum">
+                        
+                    </div>
+                    <div id="pretraga-dole-levo" >
+                          Sortiraj po godini &nbsp; &nbsp;
+                           <button id="godina-gore"> <i class="fas fa-arrow-up"></i> </button> 
+                           <button id="godina-dole"> <i class="fas fa-arrow-down"></i> </button>  
+                        </div>
+                        <div id="pretraga-dole-desno">
                            Sortiraj po naslovu
-                           <button id="naslov-gore"> ^ </button> 
-                           <button id="naslov-dole"> v </button> 
+                           <button id="naslov-gore"> <i class="fas fa-arrow-up"></i> </button> 
+                           <button id="naslov-dole"> <i class="fas fa-arrow-down"></i>  </button>
+                        </div> 
                          </div>
                          <div id="prikaz"></div>
 

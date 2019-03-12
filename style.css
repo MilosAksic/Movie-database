@@ -110,7 +110,7 @@ main{
     cursor: pointer;
     
 }
-.element2 #adding input {
+.element2 #adding input , #kriterijum {
     width: 300px;
     border-radius: 10px;
     
@@ -123,3 +123,38 @@ main{
     right: 20%;
 }
 
+#pretraga-gore {
+    margin-bottom: 10px;
+}
+
+#pretraga-dole-levo ,#pretraga-dole-desno {
+    margin-right: 10px;
+    display: inline;
+}
+
+.slike{
+    width: 100px;
+    height: 150px;
+}
+.naslov-filma {
+    font-size: 16px;
+    font-weight: bold;
+}
+.filmski-div {
+    border: 2px solid brown;
+    border-radius: 5px;
+    float:left;
+    padding: 10px;
+    margin: 10px;
+    background: yellow;
+    opacity: 0.8;
+    width: 200px;
+    height: 250px;
+}
+
+#prikaz {
+    margin: 0 auto;
+    height: auto;
+    width: 1400px;
+    height:1000px;
+}
