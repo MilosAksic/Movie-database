@@ -180,10 +180,6 @@ main{
     border-radius: 5px;
 }
 
-.iks:hover {
-    cursor: pointer;
-}
-
 .fa-bell{
     color:white;
     font-size: 20px;
