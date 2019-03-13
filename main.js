@@ -47,7 +47,8 @@ function prikazi(rezultati) {
   const limit = rezultati.length >= 14 ? 14 : rezultati.length
   for (let i = 0; i < limit; i++) {
     stringUpis += ` <div class= "filmski-div">
-    <h3 class= "naslov-filma">${rezultati[i].naziv}</h3> 
+    <div> <i class="fas fa-times-circle"></i></div>
+    <h3 class= "naslov-filma"> ${rezultati[i].naziv}</h3> 
     <p> Godina : ${rezultati[i].godina}</p> 
      <img src=${rezultati[i].slika} alt="" class="slike">
         </div> `
@@ -61,7 +62,8 @@ function render(niz) {
   const limit = niz.length >= 14 ? 14 : niz.length
   for (var i = 0; i < limit; i++) {
     sablon += ` <div class= "filmski-div">
-            <h3 class= "naslov-filma">${niz[i].naziv}</h3> 
+    <div class="iks"> <i class="fas fa-times-circle " ></i></div>
+            <h3 class= "naslov-filma">${niz[i].naziv} </h3> 
             <p> Godina : ${niz[i].godina}</p> 
              <img src=${niz[i].slika} alt="" class="slike">
                 </div> `
