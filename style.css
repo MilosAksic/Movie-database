@@ -22,15 +22,16 @@ body{
     height: 300px;
 }
 
+
 nav h2{
     font-weight: bold;
     font-style: italic;
-    text-indent: 50px;
+    text-indent: 30px;
     color: white;
 }
 
 nav li{
-    text-indent: 50px;
+    text-indent: 30px;
    
 }
 
@@ -148,6 +149,7 @@ main{
 .filmski-div {
     border: 2px solid brown;
     border-radius: 5px;
+    position: relative;
     padding: 10px;
     background: yellow;
     opacity: 0.8;
@@ -170,8 +172,38 @@ main{
     width: 100px;
     margin-right: 5px;
     margin-left: 5px;
-}
-.log-in {
-    color : white;
+    border-radius: 10px;
 }
 
+.log-in {
+    color : white;
+    border-radius: 5px;
+}
+
+
+.iks:hover {
+    cursor: pointer;
+}
+
+.fa-bell{
+    color:white;
+    font-size: 20px;
+}
+
+.dugme{
+     color : black;
+    border-radius: 5px;
+}
+
+
+.iks{
+    display: none;
+    position: absolute;
+    right:3px;
+    top:3px;
+}
+
+
+.prikazano {
+    display: block
+}

@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Naslovna strana</title>
+    <title>Pretraga</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 
 
@@ -35,38 +36,41 @@
                         <a class="nav-link" href="dodajfilm.html">Dodaj film</a>
                     </li>
                     <li class="nav-item">
-                    <span class="log-in"> Username: </span>
-                       <input type="text" class="polje">
-                       <span class="log-in"> Password: </span>
-                       <input type="password" class="polje">
-                       <button>Log in</button>
+                            <span class="log-in" > Username: </span>
+                            <input type="text" class="polje" id="username">
+                            <span class="log-in" > Password: </span>
+                            <input type="password" class="polje" id="password">
+                            <button class=dugme id="log-in">Log in</button>
+
                     </li>
+                    <li class="nav-item"><i class="fas fa-bell"></i></i></li>
+                </ul>
 
                 </ul>
             </nav>
         </header>
         <main class="element2">
-                
-        
-                        <div id="pretragaDiv">
-                            <div id="pretraga-gore">
-                            Pretraga po nazivu
-                        
-                        <input type="text" id="kriterijum">
-                        
-                    </div>
-                    <div id="pretraga-dole-levo" >
-                          Sortiraj po godini &nbsp; &nbsp;
-                           <button id="godina-gore"> <i class="fas fa-arrow-up"></i> </button> 
-                           <button id="godina-dole"> <i class="fas fa-arrow-down"></i> </button>  
-                        </div>
-                        <div id="pretraga-dole-desno">
-                           Sortiraj po naslovu
-                           <button id="naslov-gore"> <i class="fas fa-arrow-up"></i> </button> 
-                           <button id="naslov-dole"> <i class="fas fa-arrow-down"></i>  </button>
-                        </div> 
-                         </div>
-                         <div id="prikaz"></div>
+
+
+            <div id="pretragaDiv">
+                <div id="pretraga-gore">
+                    Pretraga po nazivu
+
+                    <input type="text" id="kriterijum">
+
+                </div>
+                <div id="pretraga-dole-levo">
+                    Sortiraj po godini &nbsp; &nbsp;
+                    <button id="godina-gore"> <i class="fas fa-arrow-up"></i> </button>
+                    <button id="godina-dole"> <i class="fas fa-arrow-down"></i> </button>
+                </div>
+                <div id="pretraga-dole-desno">
+                    Sortiraj po naslovu
+                    <button id="naslov-gore"> <i class="fas fa-arrow-up"></i> </button>
+                    <button id="naslov-dole"> <i class="fas fa-arrow-down"></i> </button>
+                </div>
+            </div>
+            <div id="prikaz"></div>
 
         </main>
         <footer class="element3">
