@@ -6,12 +6,28 @@ const godinaDown = document.getElementById('godina-dole')
 const naslovUp = document.getElementById('naslov-gore')
 const naslovDown = document.getElementById('naslov-dole')
 
+
+
+const username = document.getElementById('username')
+const password = document.getElementById('password')
+
+
 const logIn = document.getElementById('log-in')
 
-const username = document.getElementById('log-in')
-const password = document.getElementById('log-in')
 
-const iks = document.getElementsByClassName('.iks')
+logIn.addEventListener('click', function () {
+  if (username.value == "admin" && password.value == "admin") {
+    const iks = document.getElementsByClassName('iks')
+    console.log(iks);
+    for (let i = 0; i < iks.length; i++) {
+      iks[i].style.display = "block"
+
+    }
+  }
+
+})
+
+
 
 let sviFilmovi = []
 let rezultati = []
@@ -76,37 +92,36 @@ function render(niz) {
                 </div> `
   }
 
-  
+
   prikaz.innerHTML = sablon
 }
 
 fetch('https://baza-filmova.herokuapp.com/filmovi/ ')
   .then(res => res.json())
   .then(data => {
-      console.log(data)
+    console.log(data)
     sviFilmovi = rezultati = data
     render(rezultati)
   })
 
-  kriterijum.addEventListener('input', function() {
+kriterijum.addEventListener('input', function () {
   rezultati = sviFilmovi.filter(film => film.naziv.includes(kriterijum.value))
 
   render(rezultati)
-  logIn.addEventListener('click', function(){
-    //if (username.value == "admin" && password.value=="admin") {
-      iks.style.display = "block";
-  
-    //
-  })
+
+
+
+
+
 })
 
 
-godinaUp.addEventListener("click", function() {
+godinaUp.addEventListener("click", function () {
   rezultati.sort(uporediGG)
   prikazi(rezultati)
 })
 
-godinaDown.addEventListener("click", function() {
+godinaDown.addEventListener("click", function () {
   rezultati.sort(uporediGD)
   prikazi(rezultati)
 })
