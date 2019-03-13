@@ -167,13 +167,11 @@ main{
 }
 
 .polje {
-    width: 150px;
+    width: 100px;
     margin-right: 5px;
     margin-left: 5px;
 }
 .log-in {
     color : white;
 }
-.iks:hover {
-    cursor: pointer;
-}
+

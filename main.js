@@ -6,6 +6,7 @@ const godinaDown = document.getElementById('godina-dole')
 const naslovUp = document.getElementById('naslov-gore')
 const naslovDown = document.getElementById('naslov-dole')
 
+const logIn = document.getElementById('log-in')
 
 let sviFilmovi = []
 let rezultati = []
@@ -58,6 +59,7 @@ function prikazi(rezultati) {
 
 
 function render(niz) {
+  console.log(niz)
   let sablon = ''
   const limit = niz.length >= 14 ? 14 : niz.length
   for (var i = 0; i < limit; i++) {
@@ -106,3 +108,6 @@ naslovDown.addEventListener("click", function () {
   rezultati.sort(uporediND)
   prikazi(rezultati)
 })
+
+
+logIn.addEventListener ('click')
