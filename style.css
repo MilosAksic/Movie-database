@@ -169,7 +169,7 @@ main{
 }
 
 .polje {
-    width: 150px;
+    width: 100px;
     margin-right: 5px;
     margin-left: 5px;
     border-radius: 10px;
@@ -179,6 +179,7 @@ main{
     color : white;
     border-radius: 5px;
 }
+
 
 .fa-bell{
     color:white;
@@ -190,12 +191,11 @@ main{
     border-radius: 5px;
 }
 
-.iks:hover{
-    cursor: pointer;
-}
 
 .iks{
+    display: none;
     position: absolute;
     right:3px;
     top:3px;
 }
+

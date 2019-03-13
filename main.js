@@ -6,6 +6,12 @@ const godinaDown = document.getElementById('godina-dole')
 const naslovUp = document.getElementById('naslov-gore')
 const naslovDown = document.getElementById('naslov-dole')
 
+const logIn = document.getElementById('log-in')
+
+const username = document.getElementById('username')
+const password = document.getElementById('password')
+
+const iks = document.getElementsByClassName('iks')
 
 let sviFilmovi = []
 let rezultati = []
@@ -47,7 +53,7 @@ function prikazi(rezultati) {
   const limit = rezultati.length >= 14 ? 14 : rezultati.length
   for (let i = 0; i < limit; i++) {
     stringUpis += ` <div class= "filmski-div">
-    <div> <i class="fas fa-times-circle"></i></div>
+    <div class="iks"> <i class="fas fa-times-circle"></i></div>
     <h3 class= "naslov-filma"> ${rezultati[i].naziv}</h3> 
     <p> Godina : ${rezultati[i].godina}</p> 
      <img src=${rezultati[i].slika} alt="" class="slike">
@@ -58,6 +64,7 @@ function prikazi(rezultati) {
 
 
 function render(niz) {
+  console.log(niz)
   let sablon = ''
   const limit = niz.length >= 14 ? 14 : niz.length
   for (var i = 0; i < limit; i++) {
@@ -68,6 +75,7 @@ function render(niz) {
              <img src=${niz[i].slika} alt="" class="slike">
                 </div> `
   }
+
   
   prikaz.innerHTML = sablon
 }
@@ -106,3 +114,14 @@ naslovDown.addEventListener("click", function () {
   rezultati.sort(uporediND)
   prikazi(rezultati)
 })
+
+
+  logIn.addEventListener('click', function(){
+    //if (username.value == "admin" && password.value=="admin") {
+      iks.classList.add(".prikazano");
+  
+    //
+  })
+
+
+
