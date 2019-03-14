@@ -11,8 +11,14 @@ const naslovDown = document.getElementById('naslov-dole')
 const username = document.getElementById('username')
 const password = document.getElementById('password')
 
-
+  
 const logIn = document.getElementById('log-in')
+
+const ws = new WebSocket('wss://baza-filmova.herokuapp.com')
+
+ws.addEventListener('message', e => {
+  console.log(e.data)
+})
 
 
 
@@ -115,6 +121,32 @@ kriterijum.addEventListener('input', function () {
 
   render(rezultati)
 
+})
+ // fetch nizova
+
+
+
+
+
+//modal
+
+$(document).on('click', ".filmski-div", function (){
+  $("#myModal").modal('show');
+  let ime = $('.filmski-div > h3').html()
+  console.log(ime);
+  
+  fetch(`http://www.omdbapi.com/?t=${ime}&plot=full&apikey=2a1dfa44`)
+  .then(res => res.json())
+  .then(data => {
+    console.log(data)
+    document.getElementById('movie-title').innerText= data.Title;
+    document.getElementById('Opis').innerText= data.Plot;
+
+    
+})
+});
+$('#ok').on('click', function () {
+  $("#myModal").modal('hide');
 })
 
 
