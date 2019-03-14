@@ -253,4 +253,9 @@ main{
 
 #drzac-filma {
     padding: 10px;
+    
+}
+
+.ID-filma{
+    display: none
 }
