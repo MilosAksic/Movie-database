@@ -129,8 +129,8 @@ kriterijum.addEventListener('input', function () {
 //modal
 
 $(document).on('click', ".filmski-div", function (){
-  $("#myModal").modal('show');
-  let ime = $('.filmski-div > h3').html()
+  $("#myModal").modal('show')
+  let ime = $(this).find('h3').html()
   console.log(ime);
   
   fetch(`http://www.omdbapi.com/?t=${ime}&plot=full&apikey=2a1dfa44`)
@@ -139,6 +139,7 @@ $(document).on('click', ".filmski-div", function (){
     console.log(data)
     document.getElementById('movie-title').innerText= data.Title;
     document.getElementById('Opis').innerText= data.Plot;
+    document.getElementById('Released').innerText= data.Released;
 
     
 })

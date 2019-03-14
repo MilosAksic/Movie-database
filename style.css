@@ -219,6 +219,7 @@ main{
 }
 .modal-body {
   text-align: center;
+  
 }
 .black {
   display: none;
@@ -248,4 +249,8 @@ main{
 
 #Opis {
     font-size: 15px;
+}
+
+#drzac-filma {
+    padding: 10px;
 }
