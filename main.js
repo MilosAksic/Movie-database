@@ -1,23 +1,25 @@
-const prikaz = document.getElementById('prikaz')
-const kriterijum = document.getElementById('kriterijum')
+let d = id =>document.getElementById(id)
 
-const godinaUp = document.getElementById('godina-gore')
-const godinaDown = document.getElementById('godina-dole')
-const naslovUp = document.getElementById('naslov-gore')
-const naslovDown = document.getElementById('naslov-dole')
+const prikaz = d('prikaz')
+const kriterijum = d('kriterijum')
+
+const godinaUp = d('godina-gore')
+const godinaDown = d('godina-dole')
+const naslovUp = d('naslov-gore')
+const naslovDown = d('naslov-dole')
 
 
 
-const username = document.getElementById('username')
-const password = document.getElementById('password')
+const username = d('username')
+const password = d('password')
 
   
-const logIn = document.getElementById('log-in')
+const logIn = d('log-in')
 
 const ws = new WebSocket('wss://baza-filmova.herokuapp.com')
 
 ws.addEventListener('message', e => {
-  console.log(e.data)
+  console.log(e.data) 
 })
 
 
@@ -32,6 +34,16 @@ logIn.addEventListener('click', function () {
   }
 
 })
+
+/// delete funkcija
+
+function deleteData(item) {
+  return fetch(`'https://baza-filmova.herokuapp.com/obrisi-film/'${item}`, {
+    method: 'delete'
+  })
+  .then(response => response.json());
+}
+
 
 
 
@@ -75,11 +87,16 @@ function prikazi(rezultati) {
   const limit = rezultati.length >= 14 ? 14 : rezultati.length
   for (let i = 0; i < limit; i++) {
     stringUpis += ` <div class= "filmski-div">
-    <div class="iks"> <i class="fas fa-times-circle"></i></div>
-    <h3 class= "naslov-filma"> ${rezultati[i].naziv}</h3> 
+    <div class="iks"> <i class="fas fa-times-circle"></i>
+    <span class="ID-filma"> ${rezultati[i]._id}</span> </div>
+    <h3 class= "naslov-filma"> ${rezultati[i].naziv}
+    
+    </h3> 
+    
     <p> Godina : ${rezultati[i].godina}</p> 
      <img src=${rezultati[i].slika} alt="" class="slike">
-        </div> `
+        </div>
+  `
   }
   prikaz.innerHTML = stringUpis
 }
@@ -91,8 +108,13 @@ function render(niz) {
   const limit = niz.length >= 14 ? 14 : niz.length
   for (var i = 0; i < limit; i++) {
     sablon += ` <div class= "filmski-div">
-    <div class="iks"> <i class="fas fa-times-circle " ></i></div>
+    <div class="iks"> <i class="fas fa-times-circle " ></i>
+    
+    <span class="ID-filma"> ${rezultati[i]._id}</span> 
+    
+    </div>
             <h3 class= "naslov-filma">${niz[i].naziv} </h3> 
+            
             <p> Godina : ${niz[i].godina}</p> 
              <img src=${niz[i].slika} alt="" class="slike">
                 </div> `
@@ -116,14 +138,8 @@ kriterijum.addEventListener('input', function () {
   render(rezultati)
 
 
-
-
-
 })
  // fetch nizova
-
-
-
 
 
 //modal
@@ -144,6 +160,18 @@ $(document).on('click', ".filmski-div", function (){
     
 })
 });
+
+// delete 
+
+
+$(document).on('click', ".iks", function (){
+
+  let ID = $(this).find('span').html()
+  console.log(ID);
+  deleteData(ID)
+  
+});
+
 $('#ok').on('click', function () {
   $("#myModal").modal('hide');
 })
